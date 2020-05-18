@@ -267,12 +267,10 @@ namespace CTTR
 
         private void checkBox_Checked(object sender, RoutedEventArgs e)
         {
-            AutoSplitterData.isLoading = 1;
         }
 
         private void checkBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            AutoSplitterData.isLoading = 0;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
