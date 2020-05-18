@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTTR", "CTTR\CTTR.csproj", "{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Debug|x86.ActiveCfg = Debug|x86
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Debug|x86.Build.0 = Debug|x86
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Release|x86.ActiveCfg = Release|x86
+		{2CE28AB3-A0C4-4D11-AE85-6C1F3C85A355}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D09A39C9-110A-4963-8535-68EF11D44D60}
+	EndGlobalSection
+EndGlobal
