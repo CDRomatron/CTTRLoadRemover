@@ -154,19 +154,37 @@ namespace CTTR
                     bool flag1 = false;
                     bool flag2 = false;
 
-                    float val1 = (compare(bm1, bm2) + 1) / 10000000;
-                    float val2 = (compare(bm1, bm3) + 1) / 10000000;
+                    float val1 = 999999;
+                    float val2 = 999999;
 
+                    string response1 = "";
+                    string response2 = "";
 
-                    if (val1 < bst)
+                    try
                     {
-                        flag1 = true;
+                        val1 = (compare(bm1, bm2) + 1) / 10000000;
+                        val2 = (compare(bm1, bm3) + 1) / 10000000;
+
+
+                        if (val1 < bst)
+                        {
+                            flag1 = true;
+                        }
+
+                        if (val2 < lst)
+                        {
+                            flag2 = true;
+                        }
+
+                        response1 = val1.ToString();
+                        response2 = val2.ToString();
+                    }
+                    catch
+                    {
+                        response1 = "Image Size Error";
+                        response2 = "Image Size Error";
                     }
 
-                    if (val2 < lst)
-                    {
-                        flag2 = true;
-                    }
 
                     Dispatcher.Invoke(new Action(() =>
                     {
@@ -174,16 +192,18 @@ namespace CTTR
                         {
                             checkBox.IsChecked = true;
                         }
-                        else if(!flag1 && !flag2)
+                        else if (!flag1 && !flag2)
                         {
                             checkBox.IsChecked = false;
                         }
 
-                        if(cbxPreview.IsChecked == true)
+                        if (cbxPreview.IsChecked == true)
                         {
-                            imgPreview.Source = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                            tbxBSV.Text = val1.ToString();
-                            tbxLSV.Text = val2.ToString();
+                            Bitmap tmp = new Bitmap(bitmap, new System.Drawing.Size(150, 150));
+                            //imgPreview.Source = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(tmp.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                            imgPreview.Source = BitmapToImageSource(tmp);
+                            tbxBSV.Text = response1;
+                            tbxLSV.Text = response2;
                         }
                     }));
                 }
@@ -305,6 +325,22 @@ namespace CTTR
             catch (Exception ex)
             {
                 MessageBox.Show("Save failed, is the image or livesplit open?\n" + ex.Message);
+            }
+        }
+
+        BitmapImage BitmapToImageSource(Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                memory.Position = 0;
+                BitmapImage bitmapimage = new BitmapImage();
+                bitmapimage.BeginInit();
+                bitmapimage.StreamSource = memory;
+                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapimage.EndInit();
+
+                return bitmapimage;
             }
         }
     }

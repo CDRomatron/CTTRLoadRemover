@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTTR"
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
         Title="CTTR" Height="339" Width="578">
     <Grid>
@@ -11,7 +12,7 @@
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="178,20,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
         <CheckBox x:Name="checkBox" Content="Is Loading?" HorizontalAlignment="Left" Margin="381,274,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
         <Image x:Name="imgPreview" HorizontalAlignment="Left" Height="150
-               " Margin="344,16,0,0" VerticalAlignment="Top" Width="200"/>
+               " Margin="344,16,0,0" VerticalAlignment="Top" Width="150" Stretch="None"/>
         <Button x:Name="button" Content="Save Black-Screen" HorizontalAlignment="Left" Margin="100,224,0,0" VerticalAlignment="Top" Width="118" Click="button_Click"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="33,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="51"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="133,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="41"/>
