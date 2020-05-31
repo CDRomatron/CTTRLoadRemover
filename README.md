@@ -30,4 +30,4 @@ Now, start Livesplit, go to Edit Layout, and add a "Scriptable Autosplitter". Se
 Clone the solution, and build. This application does not currently have any dependancies. The file CTTR.asl is not present in the solution, and can be obtained the most recent release.
 
 ## Contact
-If you are having issues with this application, have questions, or want to suggest improvements, please contact me on [Twitter @CDRomatron](https://twitter.com/CDRomatron), on Discord @CDRomatron (Mike)#6527, on [Speedrun.com @CDRomatron](https://www.speedrun.com/CDRomatron), or leave an issue on the project issue tracker.
+If you are having issues with this application, have questions, or want to suggest improvements, please contact me on [Twitter @CDRomatron](https://twitter.com/CDRomatron), on my [Discord](https://discord.gg/AWam7rq), on [Speedrun.com @CDRomatron](https://www.speedrun.com/CDRomatron), or leave an issue on the project issue tracker.
