@@ -95,11 +95,13 @@ namespace CTTR
         {
             try
             {
-
+                //set default values
                 int x = 0;
                 int y = 0;
                 int w = 100;
                 int h = 100;
+
+                //attempt to read values from UI
                 Dispatcher.Invoke(new Action(() =>
                 {
                     try
@@ -154,8 +156,8 @@ namespace CTTR
                     bool flag1 = false;
                     bool flag2 = false;
 
-                    float val1 = 999999;
-                    float val2 = 999999;
+                    float val1;
+                    float val2;
 
                     string response1 = "";
                     string response2 = "";
@@ -181,6 +183,7 @@ namespace CTTR
                     }
                     catch
                     {
+                        //if compare functions fail
                         response1 = "Image Size Error";
                         response2 = "Image Size Error";
                     }
@@ -199,8 +202,8 @@ namespace CTTR
 
                         if (cbxPreview.IsChecked == true)
                         {
+                            //resize image to fit preview
                             Bitmap tmp = new Bitmap(bitmap, new System.Drawing.Size(150, 150));
-                            //imgPreview.Source = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(tmp.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
                             imgPreview.Source = BitmapToImageSource(tmp);
                             tbxBSV.Text = response1;
                             tbxLSV.Text = response2;
@@ -214,7 +217,6 @@ namespace CTTR
             }
             catch (Exception exp)
             {
-                Console.WriteLine("Skipping...");
             }
         }
 
@@ -283,14 +285,6 @@ namespace CTTR
                 MessageBox.Show("No settings found, be sure to save settings first");
             }
             
-        }
-
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void checkBox_Unchecked(object sender, RoutedEventArgs e)
-        {
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
