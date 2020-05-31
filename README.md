@@ -7,6 +7,9 @@ Download the latest release from https://github.com/CDRomatron/CTTRLoadRemover/r
 Either follow the guide in the provided README.txt, or continue reading below.
 
 ### Configuring
+
+Before you begin, navigate to your Livesplit folder, and create a new folder titled CTTR. Copy the .exe and the .asl files to this folder.
+
 First, run the CTTR.exe. Click start and tick the box labeled preview. Increase the X, Y, width, and height do that the top right of the preview window is the top right of the in-game minimap, and the bottom left corner is the bottom left corner of your game feed.
 
 ![Example Preview](https://i.imgur.com/4ocsN4X.png)
