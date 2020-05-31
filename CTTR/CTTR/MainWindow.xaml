@@ -10,7 +10,7 @@
     <Grid>
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="76,20,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="178,20,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
-        <CheckBox x:Name="checkBox" Content="Is Loading?" HorizontalAlignment="Left" Margin="381,274,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
+        <CheckBox x:Name="checkBox" Content="Is Loading?" HorizontalAlignment="Left" Margin="381,274,0,0" VerticalAlignment="Top"/>
         <Image x:Name="imgPreview" HorizontalAlignment="Left" Height="150
                " Margin="344,16,0,0" VerticalAlignment="Top" Width="150" Stretch="None"/>
         <Button x:Name="button" Content="Save Black-Screen" HorizontalAlignment="Left" Margin="100,224,0,0" VerticalAlignment="Top" Width="118" Click="button_Click"/>
