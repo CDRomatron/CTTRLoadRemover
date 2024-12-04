@@ -256,7 +256,7 @@ namespace CTTR
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            string[] settings = new string[6];
+            string[] settings = new string[7];
 
             settings[0] = textBox.Text;
             settings[1] = textBox1.Text;
@@ -264,6 +264,7 @@ namespace CTTR
             settings[3] = textBox3.Text;
             settings[4] = tbxBST.Text;
             settings[5] = tbxLST.Text;
+            settings[6] = fps.ToString();
 
             File.WriteAllLines("settings.ini", settings);
             MessageBox.Show("Saved!");
@@ -281,6 +282,7 @@ namespace CTTR
                 textBox3.Text = settings[3];
                 tbxBST.Text = settings[4];
                 tbxLST.Text = settings[5];
+                fps = Convert.ToInt32(settings[6]);
             }
             catch(Exception ex)
             {
