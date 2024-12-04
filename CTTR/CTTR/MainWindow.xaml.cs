@@ -39,7 +39,7 @@ namespace CTTR
 
             if (!File.Exists("settings.ini"))
             {
-                string[] tmpSettings = new string[] { "0", "0", "100", "100", "0", "0" };
+                string[] tmpSettings = new string[] { "0", "0", "100", "100", "0", "0", "30" };
                 File.WriteAllLines("settings.ini", tmpSettings);
             }
             else //otherwise load settings
@@ -52,6 +52,7 @@ namespace CTTR
                 textBox3.Text = settings[3];
                 tbxBST.Text = settings[4];
                 tbxLST.Text = settings[5];
+                fps = Convert.ToInt32(settings[6]);
             }
             
         }
@@ -61,6 +62,7 @@ namespace CTTR
         Bitmap savedbmp;
         Bitmap savedbmp2;
         int bst, lst;
+        int fps;
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
@@ -72,7 +74,7 @@ namespace CTTR
             tbxLST.IsEnabled = false;
             savedbmp = new Bitmap("saved.bmp");
             savedbmp2 = new Bitmap("saved2.bmp");
-            timer = new Timer(1000/30);
+            timer = new Timer(1000/fps);
             timer.Elapsed += OnTimedEvent;
 
             timer.Start();
